@@ -17,7 +17,6 @@ require (
 	github.com/nicholasjackson/grpc-consul-resolver v0.2.0
 	github.com/opentracing/opentracing-go v1.1.0
 	github.com/openzipkin/zipkin-go v0.2.0
-	github.com/pierrec/lz4 v2.0.5+incompatible // indirect
 	github.com/prometheus/client_golang v1.1.0 // indirect
 	github.com/smartystreets/goconvey v0.0.0-20190731233626-505e41936337 // indirect
 	github.com/sony/gobreaker v0.4.1
@@ -27,3 +26,5 @@ require (
 	google.golang.org/genproto v0.0.0-20190530194941-fb225487d101 // indirect
 	google.golang.org/grpc v1.23.0
 )
+
+go 1.13

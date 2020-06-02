@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -9,6 +9,7 @@ metadata:
     io.kompose.service: router-http
   name: router-http
 spec:
+  progressDeadlineSeconds: 600
   replicas: 1
   strategy: {}
   selector:
