@@ -27,12 +27,21 @@ The gokitconsulk8s is comprised of 3 micorservice
 
 ## Install
 
+prerequisites:
+- helm
+- skaffold
+- go
+- minikube or docker kubernetes
+
 prepare __helm cluster__
 
 ```sh
 $ cd consul-helm
 $ helm list
-$ helm install ./ -n cc
+$ helm install .
+$ helm repo add stable https://kubernetes-charts.storage.googleapis.com
+$ helm install prometheus-operator stable/prometheus-operator
+$ kubectl create namespace monitoring
 ...
 ```
 
