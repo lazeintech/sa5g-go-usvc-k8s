@@ -91,7 +91,7 @@ spec:
       initContainers:
         - name: init-opentracing
           image: cirrusci/wget
-          command: ['sh', '-c', 'wget -O - https://github.com/rnburn/zipkin-cpp-opentracing/releases/download/v0.5.2/linux-amd64-libzipkin_opentracing_plugin.so.gz | gunzip -c > /usr/local/lib/libzipkin_opentracing_plugin.so']
+          command: ['sh', '-c', 'wget -O - https://github.com/miki-tnt/sa5g-go-usvc-k8s/raw/master/linux-amd64-libzipkin_opentracing_plugin.so.gz | gunzip -c > /usr/local/lib/libzipkin_opentracing_plugin.so']
       containers:
         - name: ingress-http
           image: opentracing/nginx-opentracing

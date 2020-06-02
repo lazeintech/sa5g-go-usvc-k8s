@@ -48,7 +48,7 @@ $ kubectl create namespace monitoring
 ## Usage
 
 ```sh
-skaffold run
+skaffold run --status-check=false
 ```
 
 ## Test

@@ -28,7 +28,7 @@ build:
     - image: cage1016/gokitconsulk8s-website
       context: deployments/k8s/website
       docker:
-        dockerfile: DockerFile
+        dockerfile: Dockerfile
   tagPolicy:
     sha256: {}
   local: {}
