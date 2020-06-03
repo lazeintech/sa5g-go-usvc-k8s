@@ -7,14 +7,13 @@ require (
 	github.com/go-kit/kit v0.9.0
 	github.com/golang/protobuf v1.4.2
 	github.com/gorilla/mux v1.7.3
-	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
-	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645
-	github.com/hashicorp/consul v1.6.0
-	github.com/hashicorp/consul/api v1.2.0
-	github.com/hashicorp/go-hclog v0.9.2
+	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0 // indirect
+	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645 // indirect
+	github.com/hashicorp/consul v1.6.0 // indirect
+	github.com/hashicorp/go-hclog v0.9.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.1 // indirect
 	github.com/mwitkow/grpc-proxy v0.0.0-20181017164139-0f1106ef9c76
-	github.com/nicholasjackson/grpc-consul-resolver v0.2.0
+	github.com/nicholasjackson/grpc-consul-resolver v0.2.0 // indirect
 	github.com/opentracing/opentracing-go v1.1.0
 	github.com/openzipkin/zipkin-go v0.2.0
 	github.com/prometheus/client_golang v1.1.0 // indirect
