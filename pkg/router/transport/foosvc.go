@@ -11,9 +11,9 @@ import (
 	stdzipkin "github.com/openzipkin/zipkin-go"
 	"google.golang.org/grpc"
 
-	"github.com/cage1016/gokitconsulk8s/pkg/foosvc/endpoints"
-	"github.com/cage1016/gokitconsulk8s/pkg/foosvc/service"
-	"github.com/cage1016/gokitconsulk8s/pkg/foosvc/transports"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/foosvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/foosvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/foosvc/transports"
 )
 
 func MakeFooSvcHandler(ctx context.Context, target string, tracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) http.Handler {

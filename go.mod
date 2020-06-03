@@ -1,4 +1,4 @@
-module github.com/cage1016/gokitconsulk8s
+module github.com/miki-tnt/sa5g-go-usvc-k8s
 
 require (
 	github.com/VividCortex/gohistogram v1.0.0 // indirect

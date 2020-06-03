@@ -1,6 +1,6 @@
-PROJECT_NAME = gokitconsulk8s
+PROJECT_NAME = sa5g-go-usvc-k8s
 BINARY_PREFIX = ${PROJECT_NAME}
-IMAGE_PREFIX = cage1016/${BINARY_PREFIX}
+IMAGE_PREFIX = miki-tnt/${BINARY_PREFIX}
 BUILD_DIR = build
 SERVICES = addsvc router foosvc preamblesvc
 DOCKERS_CLEANBUILD = $(addprefix cleanbuild_docker_,$(SERVICES))

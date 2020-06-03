@@ -20,14 +20,14 @@ import (
 	"google.golang.org/grpc/reflection"
 
 	pb "github.com/miki-tnt/sa5g-go-usvc-k8s/pb/preamblesvc"
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/endpoints"
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/service"
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/transports"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pb/preamblesvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pb/preamblesvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pb/preamblesvc/transports"
 )
 
 const (
 	defZipkinV2URL string = ""
-	defNameSpace   string = "gokitconsulk8s"
+	defNameSpace   string = "sa5g-go-usvc-k8s"
 	defServiceName string = "preamblesvc"
 	defLogLevel    string = "error"
 	defServiceHost string = "localhost"

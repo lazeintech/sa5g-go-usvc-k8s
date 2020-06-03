@@ -377,6 +377,7 @@ github.com/miekg/dns v1.0.8/go.mod h1:W1PPwlIAgtquWBMBEV9nkV9Cazfe8ScdGz/Lj7v3Nr
 github.com/miekg/dns v1.0.14 h1:9jZdLNd/P4+SfEJ0TNyxYpsK8N4GtfylBLqtbYN1sbA=
 github.com/miekg/dns v1.0.14/go.mod h1:W1PPwlIAgtquWBMBEV9nkV9Cazfe8ScdGz/Lj7v3Nrg=
 github.com/miki-tnt/sa5g-go-usvc-k8s v0.0.0-20200602082106-96eb857e2bb5 h1:IVaUhalzT1hpGVISC1VgyJnoNxI8auAKx9KWurclbKs=
+github.com/miki-tnt/sa5g-go-usvc-k8s v0.0.0-20200603021205-8457b26c18ca h1:I419HkyQZRbzaOE9z/+VxY4Njv2QrIOWtHEiVul7HzA=
 github.com/mitchellh/cli v1.0.0 h1:iGBIsUe3+HZ/AD/Vd7DErOt5sU9fa8Uj7A2s1aggv1Y=
 github.com/mitchellh/cli v1.0.0/go.mod h1:hNIlj7HEI86fIcpObd7a0FcrxTWetlwJDGcceTlRvqc=
 github.com/mitchellh/copystructure v0.0.0-20170525013902-d23ffcb85de3/go.mod h1:eOsF2yLPlBBJPvD+nhl5QMTBSOBbOph6N7j/IDUw7PY=

@@ -32,7 +32,7 @@ spec:
               value: info
             - name: QS_ZIPKIN_V2_URL
               value: http://localhost:9411/api/v2/spans
-          image: cage1016/gokitconsulk8s-addsvc
+          image: miki-tnt/sa5g-go-usvc-k8s-addsvc
           name: addsvc
         - name: prometheus-statsd
           image: "prom/statsd-exporter:latest"

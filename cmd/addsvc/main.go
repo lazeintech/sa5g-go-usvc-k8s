@@ -19,15 +19,15 @@ import (
 	healthgrpc "google.golang.org/grpc/health/grpc_health_v1"
 	"google.golang.org/grpc/reflection"
 
-	pb "github.com/cage1016/gokitconsulk8s/pb/addsvc"
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/endpoints"
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/service"
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/transports"
+	pb "github.com/miki-tnt/sa5g-go-usvc-k8s/pb/addsvc"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/transports"
 )
 
 const (
 	defZipkinV2URL string = ""
-	defNameSpace   string = "gokitconsulk8s"
+	defNameSpace   string = "sa5g-go-usvc-k8s"
 	defServiceName string = "addsvc"
 	defLogLevel    string = "error"
 	defServiceHost string = "localhost"

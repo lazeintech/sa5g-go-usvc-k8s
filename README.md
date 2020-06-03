@@ -1,6 +1,6 @@
-<h1 align="center">Welcome to gokitconsulk8s 👋</h1>
+<h1 align="center">Welcome to sa5g-go-usvc-k8s 👋</h1>
 <p>
-  <a href="https://github.com/cage1016/gokitconsulk8s/blob/master/LICENSE">
+  <a href="https://github.com/miki-tnt/sa5g-go-usvc-k8s/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
   <a href="https://twitter.com/CageChung">
@@ -12,7 +12,7 @@
 
 ## Architecture
 
-The gokitconsulk8s is comprised of 3 micorservice
+The sa5g-go-usvc-k8s is comprised of 3 micorservice
 
 1. Router
     - http
@@ -96,11 +96,11 @@ visit http://localhost:9411
 👤 **KAI-CHU CHUNG**
 
 * Twitter: [@CageChung](https://twitter.com/CageChung)
-* Github: [@cage1016](https://github.com/cage1016)
+* Github: [@miki-tnt](https://github.com/miki-tnt)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/cage1016/gokitconsulk8s/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/miki-tnt/sa5g-go-usvc-k8s/issues).
 
 ## Show your support
 
@@ -112,8 +112,8 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2019 [KAI-CHU CHUNG](https://github.com/cage1016).<br />
-This project is [MIT](https://github.com/cage1016/gokitconsulk8s/blob/master/LICENSE) licensed.
+Copyright © 2019 [KAI-CHU CHUNG](https://github.com/miki-tnt).<br />
+This project is [MIT](https://github.com/miki-tnt/sa5g-go-usvc-k8s/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

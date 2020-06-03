@@ -2,28 +2,28 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-    - image: cage1016/gokitconsulk8s-addsvc
+    - image: miki-tnt/sa5g-go-usvc-k8s-addsvc
       custom:
         buildCommand: make dev_docker_addsvc
         dependencies:
           paths:
             - cmd/addsvc/main.go
             - pkg/addsvc
-    - image: cage1016/gokitconsulk8s-foosvc
+    - image: miki-tnt/sa5g-go-usvc-k8s-foosvc
       custom:
         buildCommand: make dev_docker_foosvc
         dependencies:
           paths:
             - cmd/foosvc/main.go
             - pkg/foosvc
-    - image: mikitnt/gokitconsulk8s-preamblesvc
+    - image: miki-tnt/sa5g-go-usvc-k8s-preamblesvc
       custom:
         buildCommand: make dev_docker_preamblesvc
         dependencies:
           paths:
             - cmd/preamblesvc/main.go
             - pkg/gnodeb
-    - image: cage1016/gokitconsulk8s-router
+    - image: miki-tnt/sa5g-go-usvc-k8s-router
       custom:
         buildCommand: make dev_docker_router
         dependencies:
@@ -33,7 +33,7 @@ build:
             - pkg/foosvc
             - pkg/addsvc
             - pkg/gnodeb
-    - image: cage1016/gokitconsulk8s-website
+    - image: miki-tnt/sa5g-go-usvc-k8s-website
       context: deployments/k8s/website
       docker:
         dockerfile: Dockerfile

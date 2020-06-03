@@ -24,7 +24,7 @@ spec:
       annotations:
         "consul.hashicorp.com/connect-inject": "true"
         "consul.hashicorp.com/connect-service": "router-grpc"
-        "consul.hashicorp.com/connect-service-upstreams": "preabmlesvc:9021,addsvc:8021,foosvc:7021,zipkin:9411"
+        "consul.hashicorp.com/connect-service-upstreams": "preamblesvc:9021,addsvc:8021,foosvc:7021,zipkin:9411"
         "consul.hashicorp.com/connect-service-protocol": "grpc"
         "consul.hashicorp.com/connect-service-port": "8001"
     spec:
@@ -42,7 +42,7 @@ spec:
               value: "8001"
             - name: QS_ZIPKIN_V2_URL
               value: http://localhost:9411/api/v2/spans
-          image: cage1016/gokitconsulk8s-router
+          image: miki-tnt/sa5g-go-usvc-k8s-router
           name: router-grpc
           resources: {}
       restartPolicy: Always

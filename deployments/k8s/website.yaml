@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: website
-          image: cage1016/gokitconsulk8s-website
+          image: miki-tnt/sa5g-go-usvc-k8s-website
           ports:
             - containerPort: 80

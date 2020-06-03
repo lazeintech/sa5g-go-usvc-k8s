@@ -19,9 +19,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	pb "github.com/cage1016/gokitconsulk8s/pb/addsvc"
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/endpoints"
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/service"
+	pb "github.com/miki-tnt/sa5g-go-usvc-k8s/pb/addsvc"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/service"
 )
 
 type grpcServer struct {

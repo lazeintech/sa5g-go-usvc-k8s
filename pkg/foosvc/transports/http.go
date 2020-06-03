@@ -27,8 +27,8 @@ import (
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc/status"
 
-	"github.com/cage1016/gokitconsulk8s/pkg/foosvc/endpoints"
-	"github.com/cage1016/gokitconsulk8s/pkg/foosvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/foosvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/foosvc/service"
 )
 
 type errorWrapper struct {

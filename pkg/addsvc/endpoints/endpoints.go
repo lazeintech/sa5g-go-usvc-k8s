@@ -15,7 +15,7 @@ import (
 	"github.com/sony/gobreaker"
 	"golang.org/x/time/rate"
 
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/service"
 )
 
 // Endpoints collects all of the endpoints that compose the addsvc service. It's

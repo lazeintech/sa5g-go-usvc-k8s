@@ -10,9 +10,9 @@ import (
 	stdzipkin "github.com/openzipkin/zipkin-go"
 	"google.golang.org/grpc"
 
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/endpoints"
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/service"
-	"github.com/cage1016/gokitconsulk8s/pkg/addsvc/transports"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/transports"
 )
 
 func MakeAddSvcHandler(ctx context.Context, target string, tracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) http.Handler {
