@@ -5,7 +5,7 @@ require (
 	github.com/afex/hystrix-go v0.0.0-20180502004556-fa1af6a1f4f5 // indirect
 	github.com/codeskyblue/gohttpserver v0.0.0-20190302135655-85b2bd5dc484 // indirect
 	github.com/go-kit/kit v0.9.0
-	github.com/golang/protobuf v1.3.2
+	github.com/golang/protobuf v1.4.2
 	github.com/gorilla/mux v1.7.3
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645
@@ -23,8 +23,8 @@ require (
 	github.com/streadway/handy v0.0.0-20190108123426-d5acb3125c2a // indirect
 	go.opencensus.io v0.20.2 // indirect
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
-	google.golang.org/genproto v0.0.0-20190530194941-fb225487d101 // indirect
-	google.golang.org/grpc v1.23.0
+	google.golang.org/grpc v1.27.0
+	google.golang.org/protobuf v1.24.0
 )
 
 go 1.13

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pb;
+
+// The Preamblesvc service definition.
+service Preamblesvc {
+    
+    rpc Preamble (PreambleRequest) returns (PreambleReply) {
+    }
+
+}
+
+message PreambleRequest {
+    int64 msg = 1;
+}
+
+message PreambleReply {
+    int64 rs = 1;
+    string err = 2;
+}

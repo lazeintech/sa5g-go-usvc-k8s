@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: preamblesvc
+  name: preamblesvc
+spec:
+  replicas: 1
+  strategy: {}
+  selector:
+    matchLabels:
+      app: preamblesvc
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: preamblesvc
+      annotations:
+        "consul.hashicorp.com/connect-inject": "true"
+        "consul.hashicorp.com/connect-service": "preamblesvc"
+        "consul.hashicorp.com/connect-service-port": "9021"
+        "consul.hashicorp.com/connect-service-protocol": "grpc"
+        "consul.hashicorp.com/connect-service-upstreams": "zipkin:9411"
+    spec:
+      containers:
+        - env:
+            - name: QS_PREAMBLESVC_GRPC_PORT
+              value: "9021"
+            - name: QS_PREAMBLESVC_HTTP_PORT
+              value: "9020"
+            - name: QS_PREAMBLESVC_LOG_LEVEL
+              value: info
+            - name: QS_ZIPKIN_V2_URL
+              value: http://localhost:9411/api/v2/spans
+          image: mikitnt/gokitconsulk8s-preamblesvc
+          name: preamblesvc
+        - name: prometheus-statsd
+          image: "prom/statsd-exporter:latest"
+          ports:
+          - name: metrics
+            containerPort: 9202
+          - name: statsd
+            containerPort: 9125
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: preamblesvc
+    tag: gokitconsul
+  name: preamblesvc
+spec:
+  ports:
+  - name: metrics
+    port: 9190
+    targetPort: 9202
+  selector:
+    app: preamblesvc

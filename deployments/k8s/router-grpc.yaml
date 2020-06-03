@@ -24,7 +24,7 @@ spec:
       annotations:
         "consul.hashicorp.com/connect-inject": "true"
         "consul.hashicorp.com/connect-service": "router-grpc"
-        "consul.hashicorp.com/connect-service-upstreams": "addsvc:8021,foosvc:7021,zipkin:9411"
+        "consul.hashicorp.com/connect-service-upstreams": "preabmlesvc:9021,addsvc:8021,foosvc:7021,zipkin:9411"
         "consul.hashicorp.com/connect-service-protocol": "grpc"
         "consul.hashicorp.com/connect-service-port": "8001"
     spec:
@@ -32,6 +32,8 @@ spec:
         - env:
             - name: QS_ROUTER_LOG_LEVEL
               value: info
+            - name: QS_PREAMBLESVC_URL
+              value: localhost:9021
             - name: QS_ADDSVC_URL
               value: localhost:8021
             - name: QS_FOOSVC_URL

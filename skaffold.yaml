@@ -16,6 +16,13 @@ build:
           paths:
             - cmd/foosvc/main.go
             - pkg/foosvc
+    - image: mikitnt/gokitconsulk8s-preamblesvc
+      custom:
+        buildCommand: make dev_docker_preamblesvc
+        dependencies:
+          paths:
+            - cmd/preamblesvc/main.go
+            - pkg/gnodeb
     - image: cage1016/gokitconsulk8s-router
       custom:
         buildCommand: make dev_docker_router
@@ -25,6 +32,7 @@ build:
             - pkg/router
             - pkg/foosvc
             - pkg/addsvc
+            - pkg/gnodeb
     - image: cage1016/gokitconsulk8s-website
       context: deployments/k8s/website
       docker:
