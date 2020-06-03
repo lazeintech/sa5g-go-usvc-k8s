@@ -22,7 +22,7 @@ build:
         dependencies:
           paths:
             - cmd/preamblesvc/main.go
-            - pkg/gnodeb
+            - pkg/preamblesvc
     - image: miki-tnt/sa5g-go-usvc-k8s-router
       custom:
         buildCommand: make dev_docker_router
@@ -32,7 +32,7 @@ build:
             - pkg/router
             - pkg/foosvc
             - pkg/addsvc
-            - pkg/gnodeb
+            - pkg/preamblesvc
     - image: miki-tnt/sa5g-go-usvc-k8s-website
       context: deployments/k8s/website
       docker:
