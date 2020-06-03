@@ -19,9 +19,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	pb "github.com/miki-tnt/sa5g-go-usvc-k8s/pb/addsvc"
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/endpoints"
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/service"
+	pb "github.com/miki-tnt/sa5g-go-usvc-k8s/pb/preamblesvc"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/service"
 )
 
 type grpcServer struct {
@@ -39,7 +39,7 @@ func (s *grpcServer) Preamble(ctx context.Context, req *pb.PreambleRequest) (rep
 }
 
 // MakeGRPCServer makes a set of endpoints available as a gRPC server.
-func MakeGRPCServer(endpoints endpoints.Endpoints, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) (req pb.AddsvcServer) { // Zipkin GRPC Server Trace can either be instantiated per gRPC method with a
+func MakeGRPCServer(endpoints endpoints.Endpoints, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) (req pb.PreamblesvcServer) { // Zipkin GRPC Server Trace can either be instantiated per gRPC method with a
 	// provided operation name or a global tracing service can be instantiated
 	// without an operation name and fed to each Go kit gRPC server as a
 	// ServerOption.
@@ -97,7 +97,7 @@ func encodeGRPCConcatResponse(_ context.Context, grpcReply interface{}) (res int
 // of the conn. The caller is responsible for constructing the conn, and
 // eventually closing the underlying transport. We bake-in certain middlewares,
 // implementing the client library pattern.
-func NewGRPCClient(conn *grpc.ClientConn, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) service.AddsvcService { // We construct a single ratelimiter middleware, to limit the total outgoing
+func NewGRPCClient(conn *grpc.ClientConn, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) service.PreamblesvcService { // We construct a single ratelimiter middleware, to limit the total outgoing
 	// QPS from this client to all methods on the remote instance. We also
 	// construct per-endpoint circuitbreaker middlewares to demonstrate how
 	// that's done, although they could easily be combined into a single breaker
@@ -124,7 +124,7 @@ func NewGRPCClient(conn *grpc.ClientConn, otTracer stdopentracing.Tracer, zipkin
 	{
 		sumEndpoint = grpctransport.NewClient(
 			conn,
-			"pb.Addsvc",
+			"pb.Preamblesvc",
 			"Preamble",
 			encodeGRPCPreambleRequest,
 			decodeGRPCPreambleResponse,
@@ -145,7 +145,7 @@ func NewGRPCClient(conn *grpc.ClientConn, otTracer stdopentracing.Tracer, zipkin
 	{
 		concatEndpoint = grpctransport.NewClient(
 			conn,
-			"pb.Addsvc",
+			"pb.Preamblesvc",
 			"Concat",
 			encodeGRPCConcatRequest,
 			decodeGRPCConcatResponse,

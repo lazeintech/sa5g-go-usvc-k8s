@@ -27,8 +27,8 @@ import (
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc/status"
 
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/endpoints"
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/endpoints"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/service"
 )
 
 type errorWrapper struct {
@@ -92,7 +92,7 @@ func decodeHTTPConcatRequest(_ context.Context, r *http.Request) (interface{}, e
 // remote instance. We expect instance to come from a service discovery system,
 // so likely of the form "host:port". We bake-in certain middlewares,
 // implementing the client library pattern.
-func NewHTTPClient(instance string, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) (service.AddsvcService, error) { // Quickly sanitize the instance string.
+func NewHTTPClient(instance string, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer, logger log.Logger) (service.PreamblesvcService, error) { // Quickly sanitize the instance string.
 	if !strings.HasPrefix(instance, "http") {
 		instance = "http://" + instance
 	}

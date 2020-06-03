@@ -15,10 +15,10 @@ import (
 	"github.com/sony/gobreaker"
 	"golang.org/x/time/rate"
 
-	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/addsvc/service"
+	"github.com/miki-tnt/sa5g-go-usvc-k8s/pkg/preamblesvc/service"
 )
 
-// Endpoints collects all of the endpoints that compose the addsvc service. It's
+// Endpoints collects all of the endpoints that compose the preamblesvc service. It's
 // meant to be used as a helper struct, to collect all of the endpoints into a
 // single parameter.
 type Endpoints struct {
@@ -26,7 +26,7 @@ type Endpoints struct {
 }
 
 // New return a new instance of the endpoint that wraps the provided service.
-func New(svc service.AddsvcService, logger log.Logger, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer) (ep Endpoints) {
+func New(svc service.PreamblesvcService, logger log.Logger, otTracer stdopentracing.Tracer, zipkinTracer *stdzipkin.Tracer) (ep Endpoints) {
 	var preambleEndpoint endpoint.Endpoint
 	{
 		method := "sum"
@@ -44,7 +44,7 @@ func New(svc service.AddsvcService, logger log.Logger, otTracer stdopentracing.T
 
 // MakePreambleEndpoint returns an endpoint that invokes Preamble on the service.
 // Primarily useful in a server.
-func MakePreambleEndpoint(svc service.AddsvcService) (ep endpoint.Endpoint) {
+func MakePreambleEndpoint(svc service.preamblesvcService) (ep endpoint.Endpoint) {
 	return func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(PreambleRequest)
 		if err := req.validate(); err != nil {
